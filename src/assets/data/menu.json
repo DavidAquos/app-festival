@@ -1,0 +1,37 @@
+[
+  {
+    "icon": "assets/images/actuaciones.png",
+    "name": "Actuaciones",
+    "redirectTo": "/actuaciones"
+  },
+  {
+    "icon": "assets/images/talleres.png",
+    "name": "Talleres",
+    "redirectTo": "/talleres"
+  },
+  {
+    "icon": "assets/images/mapa.png",
+    "name": "Mapa",
+    "redirectTo": "/mapa"
+  },
+  {
+    "icon": "assets/images/gmap.png",
+    "name": "Como llegar",
+    "redirectTo": "/comollegar"
+  },
+  {
+    "icon": "assets/images/support.png",
+    "name": "Como llegar",
+    "redirectTo": "/support"
+  },
+  {
+    "icon": "assets/images/login.png",
+    "name": "Como llegar",
+    "redirectTo": "/login"
+  },
+  {
+    "icon": "assets/images/settings.png",
+    "name": "Como llegar",
+    "redirectTo": "/settings"
+  }
+]

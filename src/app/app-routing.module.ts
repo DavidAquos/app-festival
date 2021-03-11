@@ -11,6 +11,22 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
+  {
+    path: 'actuaciones',
+    loadChildren: () => import('./pages/actuaciones/actuaciones.module').then( m => m.ActuacionesPageModule)
+  },
+  {
+    path: 'talleres',
+    loadChildren: () => import('./pages/talleres/talleres.module').then( m => m.TalleresPageModule)
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./pages/mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'comollegar',
+    loadChildren: () => import('./pages/comollegar/comollegar.module').then( m => m.ComollegarPageModule)
+  },
 ];
 
 @NgModule({
