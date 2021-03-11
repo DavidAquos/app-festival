@@ -27,6 +27,18 @@ const routes: Routes = [
     path: 'comollegar',
     loadChildren: () => import('./pages/comollegar/comollegar.module').then( m => m.ComollegarPageModule)
   },
+  {
+    path: 'ajustes',
+    loadChildren: () => import('./pages/ajustes/ajustes.module').then( m => m.AjustesPageModule)
+  },
+  {
+    path: 'asistencia',
+    loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({
