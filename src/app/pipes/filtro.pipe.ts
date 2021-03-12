@@ -10,9 +10,7 @@ export class FiltroPipe implements PipeTransform {
       return lista;
     }
 
-    return lista.filter( item => {
-      return item[columna].includes(texto);
-    });
+    return lista.filter(s => s.nombre.toLowerCase().includes(texto.toLowerCase()));
   }
 
 }

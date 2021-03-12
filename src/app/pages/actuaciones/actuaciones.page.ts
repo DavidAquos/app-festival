@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Actuacion} from '../../interface/interface';
+import {DataService} from '../../services/data.service';
 
 @Component({
   selector: 'app-actuaciones',
@@ -8,39 +10,43 @@ import { Component, OnInit } from '@angular/core';
 export class ActuacionesPage implements OnInit {
 
   count = 0;
+  initialLength = 0;
   textFind = '';
-  listActuaciones: {actuacion: string, tiempo: string, img: string, id: string}[] = [];
-  actuaciones = [
-    {actuacion: 'El show de Pedro', tiempo: '17:00-18:00', img: 'assets/images/actuacion.jpg', id: '1233'},
-    {actuacion: 'El Santi Abascal', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1234'},
-    {actuacion: 'El show de truman', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1235'},
-    {actuacion: 'Paco el lechero', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1236'},
-    {actuacion: 'La roca va al baño', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1237'},
-    {actuacion: 'Torrente y sus mozas', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1238'},
-    ];
+  listActuaciones: Actuacion[] = [];
+  actuaciones: Actuacion[] = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.loadItems();
+    this.dataService.getActuaciones().subscribe(res => {
+      this.actuaciones = res as Actuacion[];
+      this.listActuaciones.push(...this.actuaciones.splice(0, 4));
+      this.initialLength = this.listActuaciones.length;
+    });
   }
 
-  doInfinite(event){
-    setTimeout( () => {
-      this.loadItems();
+  doInfinite(event: any) {
+    if (this.actuaciones.length > this.initialLength){
       event.target.complete();
-      if (this.count >= this.actuaciones.length) { event.target.disabled = true; }
-    }, 1000);
+      event.disabled = true;
+      return;
+    }
+    setTimeout(() => {
+      this.listActuaciones.push(...this.actuaciones.splice(0, 4));
+      event.target.complete();
+    }, 500);
   }
 
-  loadItems(){
-    for (let i = 0; i < 4; i++) {
+  loadItems(event){
+    /*for (let i = 0; i < 4; i++) {
       if (this.count === this.actuaciones.length){
         return;
       }
       this.listActuaciones.push(this.actuaciones[this.count]);
       this.count++;
-    }
+    }*/
+    this.listActuaciones.push(...this.actuaciones.splice(0, 4));
+    event.target.complete();
   }
 
   buscar(event: any) {

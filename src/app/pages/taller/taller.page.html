@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-img [src]="taller.img"></ion-img>
+    <ion-card-header>
+      <ion-card-title class="ion-text-capitalize" style="font-size: 2rem; margin-bottom: 10px">{{taller.nombre}}</ion-card-title>
+      <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em" color="primary"><ion-icon name="time-outline">
+      </ion-icon> {{taller.horario}}
+      </ion-card-subtitle>
+      <div style="width: 100%; border-bottom: #999999 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+    </ion-card-header>
+
+    <ion-card-content style="margin-top: 10px">
+      <ion-card-title style="font-size: 1.2rem;">Descripción</ion-card-title>
+      <br>
+      <ion-label>
+        {{taller.descripcion}}
+      </ion-label>
+
+      <!--
+      Aquí va un mapa si nos lo dan
+      <div style="width: 100%; border-bottom: #999999 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+
+      -->
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

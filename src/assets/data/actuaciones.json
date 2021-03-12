@@ -1,0 +1,51 @@
+[
+  {
+  "nombre": "El show de España",
+  "horario": "17:00-18:30 (1h y 30 min)",
+  "artistas": ["Pablo Motos","Rajoy","El Coletas", "Torrente", "Fernando Simón"],
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
+  "img": "assets/images/actuacion.jpg",
+  "id": "1234"
+  },
+  {
+  "nombre": "El show de los ruggats",
+  "horario": "17:00-18:30 (1h y 30 min)",
+  "artistas": ["Ruggats","Los Sinson","Arthur y los minimois", "Abeja maya", "Marco y su mono"],
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
+  "img": "assets/images/taller.jpg",
+  "id": "1234"
+  },
+  {
+  "nombre": "El show de las barbies",
+  "horario": "17:00-18:30 (1h y 30 min)",
+  "artistas": ["Ruggats","Los Sinson","Arthur y los minimois", "Abeja maya", "Marco y su mono"],
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
+  "img": "assets/images/taller.jpg",
+  "id": "1234"
+  },
+  {
+  "nombre": "Foxter y las cascanueces",
+  "horario": "17:00-18:30 (1h y 30 min)",
+  "artistas": ["Ruggats","Los Sinson","Arthur y los minimois", "Abeja maya", "Marco y su mono"],
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
+  "img": "assets/images/taller.jpg",
+  "id": "1234"
+  },
+  {
+  "nombre": "Los tin taitans",
+  "horario": "17:00-18:30 (1h y 30 min)",
+  "artistas": ["Ruggats","Los Sinson","Arthur y los minimois", "Abeja maya", "Marco y su mono"],
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
+  "img": "assets/images/taller.jpg",
+  "id": "1234"
+  },
+  {
+  "nombre": "Pepa pig",
+  "horario": "17:00-18:30 (1h y 30 min)",
+  "artistas": ["Ruggats","Los Sinson","Arthur y los minimois", "Abeja maya", "Marco y su mono"],
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
+  "img": "assets/images/taller.jpg",
+  "id": "1234"
+  }
+]
+
