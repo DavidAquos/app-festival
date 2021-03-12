@@ -8,14 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class ActuacionesPage implements OnInit {
 
   count = 0;
+  textFind = '';
   listActuaciones: {actuacion: string, tiempo: string, img: string, id: string}[] = [];
   actuaciones = [
-    {actuacion: 'Actuacion1', tiempo: '17:00-18:00', img: 'assets/images/actuacion.jpg', id: '1233'},
-    {actuacion: 'Actuacion2', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1234'},
-    {actuacion: 'Actuacion3', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1235'},
-    {actuacion: 'Actuacion4', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1236'},
-    {actuacion: 'Actuacion5', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1237'},
-    {actuacion: 'Actuacion6', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1238'},
+    {actuacion: 'El show de Pedro', tiempo: '17:00-18:00', img: 'assets/images/actuacion.jpg', id: '1233'},
+    {actuacion: 'El Santi Abascal', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1234'},
+    {actuacion: 'El show de truman', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1235'},
+    {actuacion: 'Paco el lechero', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1236'},
+    {actuacion: 'La roca va al baño', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1237'},
+    {actuacion: 'Torrente y sus mozas', tiempo: '18:00-19:00', img: 'assets/images/actuacion.jpg', id: '1238'},
     ];
 
   constructor() { }
@@ -40,5 +41,9 @@ export class ActuacionesPage implements OnInit {
       this.listActuaciones.push(this.actuaciones[this.count]);
       this.count++;
     }
+  }
+
+  buscar(event: any) {
+    this.textFind = event.detail.value;
   }
 }

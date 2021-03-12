@@ -1,77 +1,28 @@
 <app-header></app-header>
 
-<!--<ion-content>
-
-  <ion-card class="ion-no-padding">
-    <ion-card-header>
-      <ion-grid class="ion-no-margin ion-no-padding" >
-        <ion-row>
-          <ion-col size="7">
-            <ion-card-title> Título </ion-card-title>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-header>
-    <ion-card-content style="padding: 8px 8px 4px 8px">
-      <img src="assets/images/actuacion.jpg" alt="Actuacion">
-    </ion-card-content>
-
-    <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em" color="primary"><ion-icon name="time-outline"></ion-icon> 17:00-18:00 (60 min) </ion-card-subtitle>
-
-    <div style="width: 100%; border-bottom: 2px solid darkgray; margin-bottom: 10px; margin-top:10px"></div>
-    <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em; color: white !important;"> Artistas: </ion-card-subtitle>
-
-    <ion-chip style="margin-left: 15px; margin-top: 10px" color="secondary" >
-      <ion-label color="dark">Pablo motos</ion-label>
-    </ion-chip>
-    <ion-chip style="margin-left: 15px; margin-top: 10px" color="secondary" >
-      <ion-label color="dark">Fernando Simon</ion-label>
-    </ion-chip>
-    <ion-chip style="margin-left: 15px; margin-top: 10px" color="secondary" >
-      <ion-label color="dark">Rajoy</ion-label>
-    </ion-chip>
-    <ion-chip style="margin-left: 15px; margin-top: 10px" color="secondary" >
-      <ion-label color="dark">Pakito xocolatero</ion-label>
-    </ion-chip>
-    <ion-chip style="margin-left: 15px; margin-top: 10px" color="secondary" >
-      <ion-label color="dark">Mariano</ion-label>
-    </ion-chip>
-
-    <div style="width: 100%; border-bottom: 2px solid darkgray; margin-bottom: 10px; margin-top:10px"></div>
-    <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em; color: white !important;"> Descripción: </ion-card-subtitle>
-
-    <div style="margin: 10px; text-align: justify !important;">
-      <ion-label style="color: #999999 !important;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum, eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!</ion-label>
-    </div>
-  </ion-card>
-
-</ion-content>-->
-
 
 <ion-content>
   <ion-card>
-        <ion-img src="assets/images/actuacion.jpg"></ion-img>
+        <ion-img [src]="actuacion.img"></ion-img>
     <ion-card-header>
-      <ion-card-title class="ion-text-capitalize" style="font-size: 2rem; margin-bottom: 10px">Titulo</ion-card-title>
-      <div style="width: 100%; border-bottom: lightgray solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+      <ion-card-title class="ion-text-capitalize" style="font-size: 2rem; margin-bottom: 10px">{{actuacion.titulo}}</ion-card-title>
+      <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em" color="primary"><ion-icon name="time-outline">
+      </ion-icon> {{actuacion.horario}}
+      </ion-card-subtitle>
+      <div style="width: 100%; border-bottom: #999999 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
       <ion-card-title style="font-size: 1.2rem;">Artistas</ion-card-title>
-      <ion-chip>
-        <ion-label class="ion-text-capitalize"> Pablo motos </ion-label>
+      <ion-chip color="primary" *ngFor="let actores of actuacion.actores">
+        <ion-label class="ion-text-capitalize" color="primary"> {{actores}}</ion-label>
       </ion-chip>
     </ion-card-header>
 
     <ion-card-content style="margin-top: 10px">
-      <div style="margin-bottom: 10px">
-        <ion-text style="margin-left: 10px; margin-bottom: 40px" color="medium"> </ion-text><br/>
-      </div>
-
-      <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em" color="primary"><ion-icon name="time-outline">
-        </ion-icon> 17:00-18:00 (60 min)
-      </ion-card-subtitle>
-      <div style="width: 100%; border-bottom: lightgray solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+      <div style="width: 100%; border-bottom: #999999 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
       <ion-card-title style="font-size: 1.2rem;">Descripción</ion-card-title>
       <br>
-      <ion-label>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum, eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!</ion-label>
+      <ion-label>
+        {{actuacion.descripcion}}
+      </ion-label>
 
     </ion-card-content>
   </ion-card>
