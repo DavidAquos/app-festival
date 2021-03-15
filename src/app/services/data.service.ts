@@ -9,6 +9,8 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
+  logged = false;
+
   getMenuOptions() {
     return this.http.get<Componente[]>('/assets/data/menu.json');
   }

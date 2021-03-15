@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from '../../services/data.service';
+import {Componente} from '../../interface/interface';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  categorias: Componente[];
 
-  ngOnInit() {
+  constructor(private dataService: DataService) { }
+
+  ngOnInit(){
+    this.dataService.getMenuOptions().subscribe(res => {
+      this.categorias = res as Componente[];
+    });
   }
 
 }

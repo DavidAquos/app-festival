@@ -38,13 +38,6 @@ export class ActuacionesPage implements OnInit {
   }
 
   loadItems(event){
-    /*for (let i = 0; i < 4; i++) {
-      if (this.count === this.actuaciones.length){
-        return;
-      }
-      this.listActuaciones.push(this.actuaciones[this.count]);
-      this.count++;
-    }*/
     this.listActuaciones.push(...this.actuaciones.splice(0, 4));
     event.target.complete();
   }

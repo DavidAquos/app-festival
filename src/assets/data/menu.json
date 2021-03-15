@@ -22,5 +22,11 @@
     "name": "Como llegar",
     "redirectTo": "/comollegar",
     "lines": "none"
+  },
+  {
+    "icon": "assets/images/ticket.png",
+    "name": "Comprar entradas",
+    "redirectTo": "/comprarentradas",
+    "lines": "none"
   }
 ]
