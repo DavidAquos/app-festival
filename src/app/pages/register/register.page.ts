@@ -9,16 +9,7 @@ import {ToastController} from '@ionic/angular';
 })
 export class RegisterPage implements OnInit {
 
-  loginForm: FormGroup;
-  usuario: {
-    nombre: string,
-    email: string,
-    password: string,
-    password2: string,
-    telefono: number,
-  };
-
-  errormessages = {
+  /*errormessages = {
     fname: [{
       type: 'required',
       message: 'Es necesario rellenar el nombre'
@@ -56,14 +47,41 @@ export class RegisterPage implements OnInit {
       message: 'Las contraseñas no coinciden'
     },
     ],
-  };
+  };*/
 
-  constructor(public toastController: ToastController, public formBuilder: FormBuilder) { }
+  constructor(public toastController: ToastController, fb: FormBuilder) {
+    /*
+    this.form = fb.group({
+      password: ['', Validators.required],
+      password2: ['', Validators.required]
+    }, {validator: RegisterPage.passwordsMatch});
+    this.form = fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6),
+      Validators.maxLength(12), Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,12}$')])],
+      confirmPassword: ['', Validators.required],
+    }, {validator: this.matchingPasswords('password', 'password2')});*/
+  }
+
+  form: FormGroup;
+  usuario: {
+    nombre: string,
+    email: string,
+    password: string,
+    password2: string,
+    telefono: number,
+  };
 
   ngOnInit() {
     this.usuario = {
       nombre: null, email: null, password: null, password2: null, telefono: null
     };
+/*
+    const { value: password } = this.form.get('password');
+    const { value: confirmPassword } = this.form.get('password2');
+    return password === confirmPassword ? null : { passwordNotMatch: true };*/
+    /*
     this.loginForm = this.formBuilder.group({
       fname: new FormControl('', Validators.compose([
         Validators.required
@@ -86,7 +104,20 @@ export class RegisterPage implements OnInit {
         Validators.minLength(6),
         Validators.maxLength(30)
       ])),
-    });
+    });*/
+  }
+
+  matchingPasswords(passwordKey: string, confirmPasswordKey: string) {
+    return (group: FormGroup): {[key: string]: any} => {
+      const password = group.controls[passwordKey];
+      const confirmPassword = group.controls[confirmPasswordKey];
+
+      if (password.value !== confirmPassword.value) {
+        return {
+          mismatchedPasswords: true
+        };
+      }
+    };
   }
 
   enviarFormularioRegistro(formulario: NgForm) {
@@ -103,7 +134,7 @@ export class RegisterPage implements OnInit {
     const password = group.get('password').value;
     const confirmPassword = group.get('confirmPassword').value;
 
-    return password === confirmPassword ? null : { notSame: true };
+    return password === confirmPassword; // Devuelve si son iguales o distintas
   }
 
   async presentToast() {

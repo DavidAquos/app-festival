@@ -19,6 +19,9 @@
       <img [src]=a.img alt="Actuacion">
     </ion-card-content>
   </ion-card>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <app-fab-icon></app-fab-icon>
+  </ion-fab>
   <ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">
     <ion-infinite-scroll-content loadingSpinner="dots" loadingText="Cargando actuaciones...">
     </ion-infinite-scroll-content>
