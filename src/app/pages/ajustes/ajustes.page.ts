@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjustesPage implements OnInit {
 
+  darkMode = true;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  cambio(){
+    this.darkMode = !this.darkMode;
+    document.body.classList.toggle('dark');
+    console.log('Cambiado');
   }
 
 }
