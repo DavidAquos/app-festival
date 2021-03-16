@@ -21,3 +21,10 @@ export interface Taller {
   img: string;
   id: string;
 }
+
+export interface TicketPrecios {
+  nombre: string;
+  precio: number;
+  detalles: string[];
+  link: string;
+}

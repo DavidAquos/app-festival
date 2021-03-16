@@ -26,7 +26,7 @@
   {
     "icon": "assets/images/ticket.png",
     "name": "Comprar entradas",
-    "redirectTo": "/comprarentradas",
+    "redirectTo": "/comprartickets",
     "lines": "none"
   }
 ]
