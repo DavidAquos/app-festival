@@ -58,6 +58,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/comprartickets/comprartickets.module').then( m => m.ComprarticketsPageModule)
   },
 
+
 ];
 
 @NgModule({

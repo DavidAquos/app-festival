@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { AsistenciaPageRoutingModule } from './asistencia-routing.module';
 
 import { AsistenciaPage } from './asistencia.page';
+import {ComponentsModule} from '../../components/components.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    AsistenciaPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        AsistenciaPageRoutingModule,
+        ComponentsModule
+    ],
   declarations: [AsistenciaPage]
 })
 export class AsistenciaPageModule {}
