@@ -8,15 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class AjustesPage implements OnInit {
 
   darkMode = true;
-  constructor() { }
+  constructor() {
+    const prefersDark = window.matchMedia('(preferes-color-scheme: dark)');
+    this.darkMode = prefersDark.matches;
+  }
 
   ngOnInit() {
   }
 
-  cambio(){
-    this.darkMode = !this.darkMode;
-    document.body.classList.toggle('dark');
-    console.log('Cambiado');
+  cambioModo(event: any){
+    if (event.detail.checked) {
+      document.body.setAttribute('color-theme', 'dark');
+    }
+    else {
+      document.body.setAttribute('color-theme', 'light');
+    }
   }
 
+  cambioNotis(event: any) {
+
+  }
 }

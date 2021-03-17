@@ -24,7 +24,7 @@
     "lines": "none"
   },
   {
-    "icon": "assets/images/ticket.png",
+    "icon": "assets/images/tickets.png",
     "name": "Comprar entradas",
     "redirectTo": "/comprartickets",
     "lines": "none"

@@ -3,10 +3,15 @@
 <ion-content>
 
   <ion-list>
-    <ion-item>
+    <ion-item style="margin-top: 20px">
       <ion-icon slot="start" name="moon"></ion-icon>
-      <ion-label>Cambiar tema oscuro</ion-label>
-      <ion-toggle slot="end" [ngModel]="darkMode" (ionChange)="cambio()"></ion-toggle>
+      <ion-label>Tema oscuro</ion-label>
+      <ion-toggle slot="end" [ngModel]="darkMode" (ionChange)="cambioModo($event)"></ion-toggle>
+    </ion-item>
+    <ion-item style="margin-top: 20px">
+      <ion-icon slot="start" name="notifications-outline"></ion-icon>
+      <ion-label>Notificaciones</ion-label>
+      <ion-toggle slot="end" [ngModel]="darkMode" (ionChange)="cambioNotis($event)"></ion-toggle>
     </ion-item>
   </ion-list>
 
