@@ -56,7 +56,11 @@ const routes: Routes = [
   {
     path: 'comprartickets',
     loadChildren: () => import('./pages/comprartickets/comprartickets.module').then( m => m.ComprarticketsPageModule)
+  },  {
+    path: 'faq',
+    loadChildren: () => import('./pages/faq/faq.module').then( m => m.FaqPageModule)
   },
+
 
 ];
 
