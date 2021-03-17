@@ -11,7 +11,7 @@ export class AppComponent {
   }
 
   initializeApp() {
-    this.checkDarkTheme();
+    document.body.setAttribute('color-theme', 'dark');
   }
 
   checkDarkTheme() {
