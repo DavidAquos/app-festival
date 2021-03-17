@@ -43,10 +43,11 @@ export class ComprarticketsPage implements OnInit {
     await alert.present();
   }
 
-  async popover() {
+  async popover(e: any) {
     const popover = await this.popoverController.create({
       component: CartComponent,
-      translucent: true
+      translucent: true,
+      event: e
     });
     return await popover.present();
   }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from '../../services/data.service';
+import {TicketPrecios} from '../../interface/interface';
 
 @Component({
   selector: 'app-cart',
@@ -7,8 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  tickets = [{nombre: 'Reducida', precio: 6.98}, {nombre: 'Reducida', precio: 6.98}
+  , {nombre: 'Reducida', precio: 6.98}, {nombre: 'Reducida', precio: 6.98}];
 
-  ngOnInit() {}
+  constructor(private dataService: DataService) {
+  }
 
+  ngOnInit() {
+  }
+
+  menostickets() {
+
+  }
+
+  mastickets() {
+
+  }
 }

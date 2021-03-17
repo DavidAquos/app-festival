@@ -309,3 +309,15 @@
   --ion-color--shade: var(--ion-color-instagram-shade) !important;
   --ion-color--tint: var(--ion-color-instagram-tint) !important;
 }
+
+ion-popover{
+  ion-backdrop{
+    opacity: 0.5 !important;
+  }
+  .popover-wrapper{
+    .popover-content{
+      width:70vw;
+      max-width:500px;
+    }
+  }
+}
