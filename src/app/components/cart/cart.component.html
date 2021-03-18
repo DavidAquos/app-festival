@@ -1,23 +1,26 @@
 <ion-list style="padding-top: 10px;padding-bottom: 10px; background-color: #232323; opacity: 90%" mode="ios">
   <ion-item lines="none" style="--ion-item-background: #232323;" *ngFor="let t of tickets">
     <ion-img style="width: 30px; height: 30px; margin-right: 0px" slot="start" src="assets/images/ticket.png"></ion-img>
-    <ion-label style="margin-left: 5px;">{{t.nombre}}</ion-label>
+    <ion-label style="margin-left: 5px;" class="ion-text-capitalize">{{t.nombre}}</ion-label>
     <ion-grid class="ion-no-margin ion-no-padding">
       <ion-row class="ion-text-center ion-align-items-center">
         <ion-col size="4">
-          <ion-button (click)="menostickets()">-</ion-button>
+          <ion-button (click)="menostickets(t.id)">-</ion-button>
         </ion-col>
         <ion-col size="4">
           <ion-label>{{t.cant}}</ion-label>
         </ion-col>
         <ion-col size="4">
-          <ion-button (click)="mastickets()">+</ion-button>
+          <ion-button (click)="mastickets(t.id)">+</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-item>
   <ion-item style="margin-top: 20px; margin-right: 15px; --ion-item-background: #232323;">
     <ion-label>Total:</ion-label>
-    <ion-label class="ion-text-end">{{precioTotal}}€</ion-label>
+    <ion-label class="ion-text-end">{{precioTotal}} €</ion-label>
+  </ion-item>
+  <ion-item style="--ion-item-background: #232323;">
+    <ion-button style="width: 100%;" id="btnPagar"> Pagar </ion-button>
   </ion-item>
 </ion-list>
