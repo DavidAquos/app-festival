@@ -56,7 +56,11 @@ const routes: Routes = [
   {
     path: 'comprartickets',
     loadChildren: () => import('./pages/comprartickets/comprartickets.module').then( m => m.ComprarticketsPageModule)
+  },  {
+    path: 'gestionarentradas',
+    loadChildren: () => import('./pages/gestionarentradas/gestionarentradas.module').then( m => m.GestionarentradasPageModule)
   },
+
 
 
 ];

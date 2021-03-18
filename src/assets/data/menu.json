@@ -28,5 +28,11 @@
     "name": "Comprar entradas",
     "redirectTo": "/comprartickets",
     "lines": "none"
+  },
+  {
+    "icon": "assets/images/qr.png",
+    "name": "Gestionar entradas",
+    "redirectTo": "/gestionarentradas",
+    "lines": "none"
   }
 ]

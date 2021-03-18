@@ -28,3 +28,9 @@ export interface TicketPrecios {
   detalles: string[];
   link: string;
 }
+
+export interface TicketGestion {
+  tipo: string;
+  nombre: string;
+  qr: number;
+}

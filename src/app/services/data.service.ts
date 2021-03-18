@@ -27,4 +27,8 @@ export class DataService {
   getTicketsVenta() {
     return this.http.get<TicketPrecios[]>('/assets/data/ticketsprecio.json');
   }
+
+  getTicketsComprados() {
+    return this.http.get<TicketPrecios[]>('/assets/data/ticketscomprados.json');
+  }
 }

@@ -24,7 +24,7 @@ export class CartComponent implements OnInit {
         });
         this.precioTotal = this.precioTotal +
           (Number((this.dataService.ticketsCard[i].precio * this.dataService.ticketsCard[i].cant).toFixed(2)));
-        console.log(this.precioTotal);
+        console.log(Math.round(this.precioTotal * 10 ) / 10);
       }
     }
   }
