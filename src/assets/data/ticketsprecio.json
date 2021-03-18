@@ -1,24 +1,24 @@
 [
   {
-    "nombre": "Entrada reducida",
+    "nombre": "reducida",
     "precio": 6.98,
     "detalles": ["Acceso matinal 11:00 - 15:00"],
     "link": ""
   },
   {
-    "nombre": "Entrada normal",
+    "nombre": "normal",
     "precio": 9.99,
     "detalles": ["Entrada dia completo"],
     "link": ""
   },
   {
-    "nombre": "Entrada completa",
+    "nombre": "completa",
     "precio": 13.99,
     "detalles": ["Entrada dia completo","1 Consumición","Foto con el Pato Donal's"],
     "link": ""
   },
   {
-    "nombre": "Entrada VIP",
+    "nombre": "VIP",
     "precio": 21.99,
     "detalles": ["Entrada dia completo","1 Consumición","Foto con el Pato Donal's","Cola rápida","Asiento VIP actuaciones"],
     "link": ""

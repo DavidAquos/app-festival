@@ -21,22 +21,30 @@ export class ComprarticketsPage implements OnInit {
   }
 
 
-  async Alert(nombre: string) {
+  async Alert(nombre: string, precio: number) {
     const alert = await this.alertController.create({
-      header: nombre,
+      header: 'Entrada ' + nombre,
       message: 'Añadir al <strong>Carrito</strong>?',
       buttons: [
         {
           text: 'Cancel',
           role: 'cancel',
           handler: (blah) => {
-            console.log('Confirm Cancel: blah');
           }
         }, {
           text: 'Añadir',
           handler: () => {
-            console.log('Confirm Okay');
-            this.dataService.ticketsCard.push({nombre: 'Test', precio: 1.4, cant: 1});
+            let r  = false;
+            // tslint:disable-next-line:prefer-for-of
+            for (let i = 0; i < this.dataService.ticketsCard.length; i++){
+              if (this.dataService.ticketsCard[i].nombre === nombre){
+                this.dataService.ticketsCard[i].cant ++;
+                r = true;
+              }
+            }
+            if (!r){
+              this.dataService.ticketsCard.push({nombre, precio, cant: 1});
+            }
           }
         }
       ]
