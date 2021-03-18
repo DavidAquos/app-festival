@@ -14,7 +14,7 @@ export interface Actuacion {
   id: string;
 }
 
-export interface Taller {
+export interface Taller { //
   nombre: string;
   horario: string;
   descripcion: string;
