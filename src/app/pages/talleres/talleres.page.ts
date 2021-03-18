@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from '../../services/data.service';
+import {Taller} from '../../interface/interface';
 
 @Component({
   selector: 'app-talleres',
@@ -8,21 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class TalleresPage implements OnInit {
 
   count = 0;
+  initialLength = 0;
   textFind = '';
   listaTalleres: {taller: string, tiempo: string, img: string, id: string}[] = [];
-  talleres = [
-    {taller: 'Taller de manualidades', tiempo: '12:00-18:00', img: 'assets/images/taller.jpg', id: '1233'},
-    {taller: 'Taller de pintura', tiempo: '12:00-19:00', img: 'assets/images/taller.jpg', id: '1234'},
-    {taller: 'Taller de bricolaje', tiempo: '13:00-19:00', img: 'assets/images/taller.jpg', id: '1235'},
-    {taller: 'Taller de cocina', tiempo: '14:00-19:00', img: 'assets/images/taller.jpg', id: '1236'},
-    {taller: 'Taller de amasar el pan', tiempo: '11:00-19:00', img: 'assets/images/taller.jpg', id: '1237'},
-    {taller: 'Taller de pasear al perro', tiempo: '10:00-19:00', img: 'assets/images/taller.jpg', id: '1238'},
-  ];
+  talleres = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.loadItems();
+    this.dataService.getTalleres().subscribe(res => {
+      this.talleres = res as Taller[];
+      this.listaTalleres.push(...this.talleres.splice(0, 4));
+      this.initialLength = this.listaTalleres.length;
+    });
   }
 
   doInfinite(event){
