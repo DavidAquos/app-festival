@@ -3,7 +3,7 @@
 <ion-content>
   <div style="margin: 15px;">
     <h3 style="text-align: center; margin-top: 20px">Registro</h3>
-    <form #formulario="ngForm" (ngSubmit)="enviarFormularioRegistro(formulario)" action="" style="margin: 10px;">
+    <form #formulario="ngForm" (ngSubmit)="enviarFormularioRegistro(formulario)" style="margin: 10px;">
       <ion-item  mode="md" class="margen">
         <ion-label position="floating">Nombre</ion-label>
         <ion-input mode="md" type="text" required [(ngModel)]="usuario.nombre" name="nombre"></ion-input>
@@ -17,11 +17,13 @@
       </ion-list>
       <ion-item  mode="md" class="margen">
         <ion-label position="floating">Contraseña</ion-label>
-        <ion-input mode="md" type="password" [(ngModel)]="usuario.password" name="password" required minlength="7"></ion-input>
+        <ion-input mode="md" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="usuario.password" name="password" required minlength="5"></ion-input>
+        <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()" style="margin-top: 30px"></ion-icon>
       </ion-item>
       <ion-item  mode="md" class="margen">
         <ion-label position="floating">Confirmar contraseña</ion-label>
-        <ion-input mode="md" type="password" formControlName="password2" [(ngModel)]="usuario.password2" name="password2" required></ion-input>
+        <ion-input mode="md" [type]="showPassword2 ? 'text' : 'password'" type="password" [(ngModel)]="usuario.password2" name="password2" required minlength="5"></ion-input>
+        <ion-icon slot="end" [name]="passwordToggleIcon2" (click)="togglePassword2()" style="margin-top: 30px"></ion-icon>
       </ion-item>
       <ion-item mode="md" class="margen">
         <ion-label position="floating">Teléfono</ion-label>
