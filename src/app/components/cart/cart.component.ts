@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
-import {TicketPrecios} from '../../interface/interface';
 
 @Component({
   selector: 'app-cart',
@@ -9,13 +8,22 @@ import {TicketPrecios} from '../../interface/interface';
 })
 export class CartComponent implements OnInit {
 
-  tickets: [{id: number, nombre: string, precio: number}];
+  tickets: {id: number, nombre: string, precio: number, cant: number}[] = [];
+  precioTotal =  0.00;
 
   constructor(private dataService: DataService) {
   }
 
   ngOnInit() {
-
+    if (this.dataService.ticketsCard.length > 0) {
+      for (let i = 0; i < this.dataService.ticketsCard.length; i++) {
+        this.tickets.push({
+          id: i, nombre: this.dataService.ticketsCard[i].nombre,
+          precio: this.dataService.ticketsCard[i].precio, cant: this.dataService.ticketsCard[i].cant
+        });
+        this.precioTotal += this.dataService.ticketsCard[i].precio * this.dataService.ticketsCard[i].cant;
+      }
+    }
   }
 
   menostickets() {

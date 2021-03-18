@@ -36,6 +36,7 @@ export class ComprarticketsPage implements OnInit {
           text: 'Añadir',
           handler: () => {
             console.log('Confirm Okay');
+            this.dataService.ticketsCard.push({nombre: 'Test', precio: 1.4, cant: 1});
           }
         }
       ]

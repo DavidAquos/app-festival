@@ -10,7 +10,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   logged = false;
-  ticketsCard = [[0, 1]];
+  ticketsCard: {nombre: string, precio: number, cant: number}[] = [];
 
   getMenuOptions() {
     return this.http.get<Componente[]>('/assets/data/menu.json');
