@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -21,7 +22,9 @@ export class CartComponent implements OnInit {
           id: i, nombre: this.dataService.ticketsCard[i].nombre,
           precio: this.dataService.ticketsCard[i].precio, cant: this.dataService.ticketsCard[i].cant
         });
-        this.precioTotal += this.dataService.ticketsCard[i].precio * this.dataService.ticketsCard[i].cant;
+        this.precioTotal = this.precioTotal +
+          (Number((this.dataService.ticketsCard[i].precio * this.dataService.ticketsCard[i].cant).toFixed(2)));
+        console.log(this.precioTotal);
       }
     }
   }
