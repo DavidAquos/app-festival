@@ -11,14 +11,14 @@
   <div>
     <ion-grid>
       <ion-row>
-        <ion-col size="6" *ngFor="let c of categorias">
-          <div class="carta">
+        <ion-col size="6" *ngFor="let c of categories" id="{{c.name}}">
+          <div class="card">
             <ion-card color="light" style="margin: 2px" [routerLink]=c.redirectTo>
               <ion-card-header>
                 <ion-card-title style="font-size: 1.5em; text-align: center">{{c.name}}</ion-card-title>
               </ion-card-header>
               <ion-card-content>
-                <ion-img [src]=c.icon class="imagen"></ion-img>
+                <ion-img [src]=c.icon class="img"></ion-img>
               </ion-card-content>
             </ion-card>
           </div>

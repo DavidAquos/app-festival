@@ -9,13 +9,19 @@ import {Componente} from '../../interface/interface';
 })
 export class HomePage implements OnInit {
 
-  categorias: Componente[];
+  categories: Componente[];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(){
     this.dataService.getMenuOptions().subscribe(res => {
-      this.categorias = res as Componente[];
+      this.categories = res as Componente[];
+      try {
+        console.log(document.getElementById('e'));
+        document.getElementById('e').classList.toggle('visible');
+      }catch (e) {
+        console.log(e);
+      }
     });
   }
 

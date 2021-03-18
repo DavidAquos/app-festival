@@ -21,13 +21,13 @@
     "icon": "assets/images/gmap.png",
     "name": "Como llegar",
     "redirectTo": "/comollegar",
-    "lines": "none"
+    "lines": "inset"
   },
   {
     "icon": "assets/images/tickets.png",
     "name": "Comprar entradas",
     "redirectTo": "/comprartickets",
-    "lines": "none"
+    "lines": "inset"
   },
   {
     "icon": "assets/images/qr.png",
