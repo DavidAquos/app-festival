@@ -9,13 +9,13 @@ import {TicketPrecios} from '../../interface/interface';
 })
 export class CartComponent implements OnInit {
 
-  tickets = [{nombre: 'Reducida', precio: 6.98}, {nombre: 'Reducida', precio: 6.98}
-  , {nombre: 'Reducida', precio: 6.98}, {nombre: 'Reducida', precio: 6.98}];
+  tickets: [{id: number, nombre: string, precio: number}];
 
   constructor(private dataService: DataService) {
   }
 
   ngOnInit() {
+
   }
 
   menostickets() {

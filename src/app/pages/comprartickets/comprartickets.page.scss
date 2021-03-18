@@ -1,0 +1,14 @@
+.imagen{
+  height: 75px;
+  width: 75px;
+  margin: auto;
+}
+
+.carta{
+  transform: scale(1);
+  transition: all .5s ease;
+}
+
+.carta:hover {
+  transform: scale3d(0.97, 0.97, 1);
+}
