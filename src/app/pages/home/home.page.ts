@@ -17,21 +17,11 @@ export class HomePage implements OnInit {
   ngOnInit(){
     this.dataService.getMenuOptions().subscribe(res => {
       this.categories = res as Componente[];
-      try {
-        console.log(document.getElementById('e'));
-        document.getElementById('e').classList.toggle('visible');
-      }catch (e) {
-        console.log(e);
-      }
     });
   }
 
 
   loginReq(name: string) {
-    if (name === 'Gestionar entradas' && !this.dataService.logged) {
-      return false;
-    }else {
-      return true;
-    }
+    return !(name === 'Gestionar entradas' && !this.dataService.logged);
   }
 }

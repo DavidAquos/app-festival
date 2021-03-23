@@ -6,20 +6,20 @@ export interface Componente {
 }
 
 export interface Actuacion {
+  _id: string;
   nombre: string;
   horario: string;
   artistas: string[];
   descripcion: string;
   img: string;
-  id: string;
 }
 
-export interface Taller { //
+export interface Taller {
+  _id: string;
   nombre: string;
   horario: string;
   descripcion: string;
   img: string;
-  id: string;
 }
 
 export interface TicketPrecios {
