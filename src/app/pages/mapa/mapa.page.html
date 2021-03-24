@@ -6,7 +6,13 @@
     <h3 style="text-align: center; margin-top: 20px">Mapa del festival</h3>
   </div>
 
-  <ion-img src="assets/images/planomapa.png"></ion-img>
+  <img [src]="datosMapa.imagen" style="height: 40%" alt="Mapa festival"/>
+
+  <ion-list lines="none">
+    <ion-item *ngFor="let c of datosMapa.puntos">
+      <ion-label color="primary" style="font-weight: bold; font-size: 1.4em"> {{c}}</ion-label>
+    </ion-item>
+  </ion-list>
 
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <app-fab-icon></app-fab-icon>

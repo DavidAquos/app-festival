@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Taller} from '../../interface/interface';
+import {DataService} from '../../services/data.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-taller',
@@ -7,12 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TallerPage implements OnInit {
 
-  taller = {nombre: 'Taller de manualidades', img: 'assets/images/taller.jpg', horario: '17:00-18:30 (1h y 30min)',
-    descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum, ' +
-      'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!'};
-  constructor() { }
+  taller: Taller = {_id: '', descripcion: '', horario: '', img: '', img_mapa: '', nombre: ''};
+
+  constructor(private dataService: DataService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    const param = this.activatedRoute.snapshot.paramMap.get('id');
+    this.dataService.getTaller(param).subscribe(res => {
+      this.taller = res as Taller;
+    });
   }
 
 }

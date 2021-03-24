@@ -18,6 +18,9 @@
       <ion-label>
         {{taller.descripcion}}
       </ion-label>
+      <div style="width: 100%; border-bottom: #999999 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+      <ion-card-title style="font-size: 1.2rem; margin-bottom: 20px">Ubicación en el mapa</ion-card-title>
+      <ion-img [src]="taller.img_mapa" routerLink="/mapa"></ion-img>
 
       <!--
       Aquí va un mapa si nos lo dan

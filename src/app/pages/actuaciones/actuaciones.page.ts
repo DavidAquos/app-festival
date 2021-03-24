@@ -37,11 +37,6 @@ export class ActuacionesPage implements OnInit {
     }, 500);
   }
 
-  loadItems(event){
-    this.listActuaciones.push(...this.actuaciones.splice(0, 4));
-    event.target.complete();
-  }
-
   buscar(event: any) {
     this.textFind = event.detail.value;
   }

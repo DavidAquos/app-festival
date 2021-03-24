@@ -4,24 +4,26 @@
   <ion-card>
         <ion-img [src]="actuacion.img"></ion-img>
     <ion-card-header>
-      <ion-card-title class="ion-text-capitalize" style="font-size: 2rem; margin-bottom: 10px">{{actuacion.titulo}}</ion-card-title>
+      <ion-card-title class="ion-text-capitalize" style="font-size: 2rem; margin-bottom: 10px">{{actuacion.nombre}}</ion-card-title>
       <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em" color="primary"><ion-icon name="time-outline">
       </ion-icon> {{actuacion.horario}}
       </ion-card-subtitle>
       <div style="width: 100%; border-bottom: #999999 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
       <ion-card-title style="font-size: 1.2rem;">Artistas</ion-card-title>
-      <ion-chip color="primary" *ngFor="let actores of actuacion.actores">
-        <ion-label class="ion-text-capitalize" color="primary"> {{actores}}</ion-label>
+      <ion-chip color="primary" *ngFor="let artistas of actuacion.artistas">
+        <ion-label class="ion-text-capitalize" color="primary"> {{artistas}}</ion-label>
       </ion-chip>
     </ion-card-header>
 
     <ion-card-content style="margin-top: 10px">
       <div style="width: 100%; border-bottom: #999999 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
-      <ion-card-title style="font-size: 1.2rem;">Descripción</ion-card-title>
-      <br>
+      <ion-card-title style="font-size: 1.2rem; margin-bottom: 20px">Descripción</ion-card-title>
       <ion-label>
         {{actuacion.descripcion}}
       </ion-label>
+      <div style="width: 100%; border-bottom: #999999 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+        <ion-card-title style="font-size: 1.2rem; margin-bottom: 20px">Ubicación en el mapa</ion-card-title>
+      <ion-img [src]="actuacion.img_mapa" routerLink="/mapa"></ion-img>
 
     </ion-card-content>
   </ion-card>

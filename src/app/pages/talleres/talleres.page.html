@@ -3,7 +3,7 @@
 <ion-content>
   <ion-searchbar animated (ionChange)="buscar($event)"
   ></ion-searchbar>
-  <ion-card class="ion-no-padding" *ngFor="let a of listaTalleres | filtro: textFind:'taller'" [routerLink]="['/taller/', a.id]">
+  <ion-card class="ion-no-padding" *ngFor="let a of listaTalleres | filtro: textFind:'taller'" [routerLink]="['/taller/', a._id]">
     <ion-card-header>
       <ion-grid class="ion-no-margin ion-no-padding" >
         <ion-row>
@@ -17,7 +17,7 @@
       </ion-grid>
     </ion-card-header>
     <ion-card-content style="padding: 8px 8px 4px 8px">
-      <img [src]=a.img alt="Actuacion">
+      <img [src]=a.img alt="Taller">
     </ion-card-content>
   </ion-card>
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">

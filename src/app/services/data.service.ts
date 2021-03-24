@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Componente, Taller, Actuacion, TicketPrecios} from '../interface/interface';
+import {Componente, TicketPrecios} from '../interface/interface';
 
 @Injectable({
   providedIn: 'root'
@@ -28,11 +28,11 @@ export class DataService {
 
   // tslint:disable-next-line:variable-name
   getTaller(_id: string) {
-    return this.http.get (this.URL_API + `/taller/${_id}`);
+    return this.http.get(this.URL_API + `/taller/${_id}`);
   }
 
   getTalleres() {
-    return this.http.get (this.URL_API + '/talleres');
+    return this.http.get(this.URL_API + '/talleres');
   }
 
   getTicketsVenta() {
@@ -45,5 +45,9 @@ export class DataService {
 
   getSeries() {
     return this.http.get(this.URL_API);
+  }
+
+  getListaMapa() {
+    return this.http.get(this.URL_API + '/mapa');
   }
 }

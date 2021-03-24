@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Actuacion} from '../../interface/interface';
+import {DataService} from '../../services/data.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-actuacion',
@@ -7,15 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActuacionPage implements OnInit {
 
-  actuacion = {titulo: 'El show de Pablo y Pedro', img: 'assets/images/actuacion.jpg',
-    horario: '17:00-18:30 (1h y 30min)', actores: ['Pepe', 'Pedro'],
-    descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
-      'Animi aperiam consectetur consequuntur dignissimos dolorum, ' +
-      'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!'};
+  actuacion: Actuacion = {_id: '', artistas: [], descripcion: '', horario: '', nombre: '', img: '', img_mapa: ''};
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private dataService: DataService, private activatedRoute: ActivatedRoute) {
   }
 
+  ngOnInit() {
+    const param = this.activatedRoute.snapshot.paramMap.get('id');
+    this.dataService.getActuacion(param).subscribe(res => {
+      this.actuacion = res as Actuacion;
+    });
+  }
 }

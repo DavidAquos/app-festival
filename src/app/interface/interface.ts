@@ -12,6 +12,7 @@ export interface Actuacion {
   artistas: string[];
   descripcion: string;
   img: string;
+  img_mapa: string;
 }
 
 export interface Taller {
@@ -20,6 +21,7 @@ export interface Taller {
   horario: string;
   descripcion: string;
   img: string;
+  img_mapa: string;
 }
 
 export interface TicketPrecios {
@@ -33,4 +35,9 @@ export interface TicketGestion {
   tipo: string;
   nombre: string;
   qr: number;
+}
+
+export interface Mapa {
+  imagen: string;
+  puntos: string[];
 }

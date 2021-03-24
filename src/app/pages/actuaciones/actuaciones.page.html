@@ -2,7 +2,7 @@
 
 <ion-content>
   <ion-searchbar animated (ionChange)="buscar($event)"></ion-searchbar>
-  <ion-card class="ion-no-padding" *ngFor="let a of listActuaciones | filtro: textFind:'actuacion', " [routerLink]="['/actuacion/', a.id]">
+  <ion-card class="ion-no-padding" *ngFor="let a of listActuaciones | filtro: textFind:'actuacion', " [routerLink]="['/actuacion/', a._id]">
     <ion-card-header>
       <ion-grid class="ion-no-margin ion-no-padding" >
         <ion-row>
