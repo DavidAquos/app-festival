@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="light">
+  <ion-toolbar style="--background: #0c8e36;">
     <ion-buttons slot="end">
       <ion-menu-button menu="menu">
         <ion-img src="assets/images/menu.png" style="height: 35px; width: 35px"></ion-img>
@@ -12,17 +12,15 @@
     <ion-grid>
       <ion-row>
         <ion-col size="6" *ngFor="let c of categories">
-          <div *ngIf="loginReq(c.name)">
-            <div class="card">
-              <ion-card color="light" style="margin: 2px" [routerLink]=c.redirectTo>
-                <ion-card-header>
-                  <ion-card-title style="font-size: 20px; text-align: center">{{c.name}}</ion-card-title>
-                </ion-card-header>
-                <ion-card-content>
-                  <ion-img [src]=c.icon class="img"></ion-img>
-                </ion-card-content>
-              </ion-card>
-            </div>
+          <div class="card">
+            <ion-card style="margin: 2px; --background: rgba(181,231,37,0.07)" [routerLink]=c.redirectTo>
+              <ion-card-header>
+                <ion-card-title style="font-size: 20px; text-align: center; color: #0c8e36">{{c.name}}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-img [src]=c.icon class="img"></ion-img>
+              </ion-card-content>
+            </ion-card>
           </div>
         </ion-col>
       </ion-row>

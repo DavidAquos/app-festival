@@ -22,17 +22,5 @@
     "name": "Como llegar",
     "redirectTo": "/comollegar",
     "lines": "inset"
-  },
-  {
-    "icon": "assets/images/tickets.png",
-    "name": "Comprar entradas",
-    "redirectTo": "/comprartickets",
-    "lines": "inset"
-  },
-  {
-    "icon": "assets/images/qr.png",
-    "name": "Gestionar entradas",
-    "redirectTo": "/gestionarentradas",
-    "lines": "none"
   }
 ]

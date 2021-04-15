@@ -11,6 +11,5 @@ export class AppComponent {
   }
 
   initializeApp() {
-    // document.body.setAttribute('color-theme', 'dark');
   }
 }

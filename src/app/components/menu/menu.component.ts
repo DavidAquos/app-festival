@@ -17,4 +17,8 @@ export class MenuComponent implements OnInit {
     this.componentes = this.dataService.getMenuOptions();
   }
 
+  img(icon: string) {
+    const i = icon.split('.');
+    return (i[0] + 'v.' + i[1]);
+  }
 }
