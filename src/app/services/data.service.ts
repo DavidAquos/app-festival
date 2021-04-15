@@ -11,7 +11,7 @@ export class DataService {
 
   logged = false;
   ticketsCard: {nombre: string, precio: number, cant: number}[] = [];
-  URL_API = 'http://45.84.0.19:3000/api/eventapp';
+  URL_API = 'http://localhost:3000/api/eventapp';
 
   getMenuOptions() {
     return this.http.get<Componente[]>('/assets/data/menu.json');
