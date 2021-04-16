@@ -1,25 +1,23 @@
 <app-header></app-header>
-
-
 <ion-content>
-  <ion-card>
+  <ion-card style="--background: rgba(181,231,37,0.07)">
     <ion-img [src]="taller.img"></ion-img>
     <ion-card-header>
-      <ion-card-title class="ion-text-capitalize" style="font-size: 2rem; margin-bottom: 10px">{{taller.nombre}}</ion-card-title>
-      <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em" color="primary"><ion-icon name="time-outline">
+      <ion-card-title class="ion-text-capitalize" style="font-size: 2rem; margin-bottom: 10px; color: #0b8e36;">{{taller.nombre}}</ion-card-title>
+      <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em; color: black"><ion-icon name="time-outline">
       </ion-icon> {{taller.horario}}
       </ion-card-subtitle>
-      <div style="width: 100%; border-bottom: #999999 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+      <div style="width: 100%; border-bottom: #0b8e36 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
     </ion-card-header>
 
     <ion-card-content style="margin-top: 10px">
-      <ion-card-title style="font-size: 1.2rem;">Descripción</ion-card-title>
+      <ion-card-title style="font-size: 1.2rem;  color: #0b8e36;">Descripción</ion-card-title>
       <br>
       <ion-label>
         {{taller.descripcion}}
       </ion-label>
-      <div style="width: 100%; border-bottom: #999999 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
-      <ion-card-title style="font-size: 1.2rem; margin-bottom: 20px">Ubicación en el mapa</ion-card-title>
+      <div style="width: 100%; border-bottom: #0b8e36 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+      <ion-card-title style="font-size: 1.2rem; margin-bottom: 20px; color: #0b8e36;">Ubicación en el mapa</ion-card-title>
       <ion-img [src]="taller.img_mapa" routerLink="/mapa"></ion-img>
 
       <!--
