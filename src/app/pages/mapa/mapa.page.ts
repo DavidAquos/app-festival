@@ -9,14 +9,14 @@ import {Mapa} from '../../interface/interface';
 })
 export class MapaPage implements OnInit {
 
-  datosMapa: Mapa = {imagen: '', puntos: [] };
+  datosMapa = '/assets/images/mapa_numerado.jpg';
   mapaAux: Mapa = {imagen: '', puntos: [] };
 
   constructor(private dataService: DataService) {
-    this.dataService.getListaMapa().subscribe(res => {
+    /*this.dataService.getListaMapa().subscribe(res => {
       this.mapaAux = res as Mapa;
       this.datosMapa = this.mapaAux[0];
-    });
+    });*/
   }
 
   ngOnInit() {

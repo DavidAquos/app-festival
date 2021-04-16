@@ -3,17 +3,15 @@
 <ion-content>
 
   <div style="margin: 15px;" class="ion-text-center">
-    <h3 style="text-align: center; margin-top: 20px">Mapa del festival</h3>
+    <h1 style="text-align: center; margin-top: 20px; color: #0c8e36; font-weight: bold; font-size: 35px">Mapa del festival</h1>
   </div>
-
-  <img [src]="datosMapa.imagen" style="height: 40%" alt="Mapa festival"/>
-
-  <ion-list lines="none">
-    <ion-item *ngFor="let c of datosMapa.puntos">
-      <ion-label color="primary" style="font-weight: bold; font-size: 1.4em"> {{c}}</ion-label>
-    </ion-item>
-  </ion-list>
-
+  <ion-slides zoom>
+    <ion-slide>
+      <div class="swiper-zoom-container">
+        <img [src]="datosMapa" style="height: 40%" alt="Mapa festival"/>
+      </div>
+    </ion-slide>
+  </ion-slides>
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <app-fab-icon></app-fab-icon>
   </ion-fab>
