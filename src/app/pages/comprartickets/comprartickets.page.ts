@@ -15,9 +15,9 @@ export class ComprarticketsPage implements OnInit {
   constructor(private dataService: DataService, public alertController: AlertController, public popoverController: PopoverController) { }
 
   ngOnInit() {
-    this.dataService.getTicketsVenta().subscribe(tickets => {
+    /*this.dataService.getTicketsVenta().subscribe(tickets => {
       this.listTickets = tickets as TicketPrecios[];
-    });
+    });*/
   }
 
 

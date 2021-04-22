@@ -13,9 +13,9 @@ export class GestionarentradasPage implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getTicketsComprados().subscribe(tickets => {
+    /*this.dataService.getTicketsComprados().subscribe(tickets => {
     this.listTickets = tickets as unknown as TicketGestion[];
-  });
+  });*/
   }
 
 }
