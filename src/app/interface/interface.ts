@@ -39,6 +39,13 @@ export interface TicketGestion {
   qr: number;
 }
 
+export interface ComoLlegar {
+  nombre: string;
+  ubicompleta: string;
+  urlmapa: string;
+  img: string;
+}
+
 export interface Mapa {
   imagen: string;
   puntos: string[];
