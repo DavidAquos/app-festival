@@ -1,0 +1,30 @@
+[
+  {
+    "question": "¿Donde será el festival?",
+    "answer": "En elche"
+  },
+  {
+    "question": "¿Cuando será el festival?",
+    "answer": "Mañana"
+  },
+  {
+    "question": "¿A qué hora empieza?",
+    "answer": "A las 15.00"
+  },
+  {
+    "question": "¿A qué hora acaba?",
+    "answer": "A las 21.00"
+  },
+  {
+    "question": "¿Dónde puedo comprar las entradas?",
+    "answer": "En la web"
+  },
+  {
+    "question": "¿Como funciona el sistema de QR para los niños?",
+    "answer": "Guardamos la información del número de los padres del niño en el caso de que el niño se pierda y si tiene algún tipo de alergia médica"
+  },
+  {
+    "question": "¿Hay restaurante?",
+    "answer": "Si"
+  }
+]

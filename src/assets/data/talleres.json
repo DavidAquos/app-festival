@@ -3,36 +3,42 @@
     "nombre": "Taller de manualidades",
     "horario": "12:00-18:25",
     "img": "assets/images/taller.jpg",
-    "id": "1234"
+    "id": "1234",
+    "ubicacion": "Zona A"
   },
   {
     "nombre": "Taller de pintura",
     "horario": "13:45-16:10",
     "img": "assets/images/taller.jpg",
-    "id": "12345"
+    "id": "12345",
+    "ubicacion": "Zona A"
   },
   {
     "nombre": "Taller de bricolaje",
     "horario": "14:25-15:15",
     "img": "assets/images/taller.jpg",
-    "id": "12346"
+    "id": "12346",
+    "ubicacion": "Zona A"
   },
   {
     "nombre": "Taller de cocina",
     "horario": "19:30-20:15",
     "img": "assets/images/taller.jpg",
-    "id": "12347"
+    "id": "12347",
+    "ubicacion": "Zona A"
   },
   {
     "nombre": "Taller de hacer el pan",
     "horario": "10:00-18:00",
     "img": "assets/images/taller.jpg",
-    "id": "12348"
+    "id": "12348",
+    "ubicacion": "Zona A"
   },
   {
     "nombre": "Taller de hacer pizza",
     "horario": "10:25-17:15",
     "img": "assets/images/taller.jpg",
-    "id": "12349"
+    "id": "12349",
+    "ubicacion": "Zona A"
   }
 ]

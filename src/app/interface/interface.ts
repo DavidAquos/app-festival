@@ -13,6 +13,7 @@ export interface Actuacion {
   descripcion: string;
   img: string;
   img_mapa: string;
+  ubicacion: string;
 }
 
 export interface Taller {
@@ -22,6 +23,7 @@ export interface Taller {
   descripcion: string;
   img: string;
   img_mapa: string;
+  ubicacion: string;
 }
 
 export interface TicketPrecios {
@@ -47,4 +49,9 @@ export interface ComoLlegar {
 export interface Mapa {
   imagen: string;
   puntos: string[];
+}
+
+export interface Question {
+  question: string;
+  answer: string;
 }

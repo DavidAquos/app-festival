@@ -10,7 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ActuacionPage implements OnInit {
 
-  actuacion: Actuacion = {_id: '', artistas: [], descripcion: '', horario: '', nombre: '', img: '', img_mapa: ''};
+  actuacion: Actuacion = {_id: '', artistas: [], descripcion: '', horario: '', nombre: '', img: '', img_mapa: '', ubicacion: ''};
 
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute) {
   }
