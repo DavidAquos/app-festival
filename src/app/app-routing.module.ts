@@ -34,7 +34,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/ajustes/ajustes.module').then( m => m.AjustesPageModule)
   },
   {
-    path: 'asistencia',
+    path: 'faq',
     loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
   },
   {

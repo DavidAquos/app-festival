@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Actuacion, Componente, Taller, TicketPrecios} from '../interface/interface';
+import {Actuacion, Componente, Question, Taller, TicketPrecios} from '../interface/interface';
 
 @Injectable({
   providedIn: 'root'
@@ -50,7 +50,11 @@ export class DataService {
     return this.http.get<Taller[]>('/assets/data/talleres.json');
   }
 
-  /*getListaMapa() {
-    return this.http.get(this.URL_API + '/mapa');
+  /*getFaq() {
+    return this.http.get(this.URL_API + '/faq');
   }*/
+
+  getFaq() {
+    return this.http.get<Question[]>('/assets/data/faq.json');
+  }
 }

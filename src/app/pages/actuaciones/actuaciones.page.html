@@ -16,14 +16,15 @@
       </ion-grid>
     </ion-card-header>
     <ion-card-content style="padding: 8px 8px 4px 8px">
-      <img [src]=a.img alt="Actuacion">
+      <img [src]=a.img alt="Actuacion" style="margin-bottom: 20px">
+      <label style="color: black"><img src="assets/images/location.png" style="height: 20px"><span style="font-weight: bolder;">Ubicación:</span> {{a.ubicacion}}</label>
     </ion-card-content>
   </ion-card>
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <app-fab-icon></app-fab-icon>
   </ion-fab>
   <ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">
-    <ion-infinite-scroll-content loadingSpinner="dots" loadingText="Cargando actuaciones...">
+    <ion-infinite-scroll-content loadingSpinner="dots" lºoadingText="Cargando actuaciones...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 </ion-content>

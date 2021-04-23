@@ -5,7 +5,8 @@
   "artistas": ["Pepe","Pedro"],
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
   "img": "assets/images/actuacion.jpg",
-  "id": "1234"
+  "id": "1234",
+    "ubicacion": "Zona A"
   },
   {
   "nombre": "Actuación de los monos",
@@ -13,7 +14,8 @@
   "artistas": ["Pipo","Robert","Garcia", "Manolo", "Marco"],
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
   "img": "assets/images/taller.jpg",
-  "id": "1234"
+  "id": "1234",
+    "ubicacion": "Zona A"
   },
   {
   "nombre": "El show de los perros",
@@ -21,7 +23,8 @@
   "artistas": ["Ruggats","Los Sinson","Arthur y los minimois", "Abeja maya", "Marco y su mono"],
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
   "img": "assets/images/taller.jpg",
-  "id": "1234"
+  "id": "1234",
+    "ubicacion": "Zona A"
   },
   {
   "nombre": "Mariano y su mascota",
@@ -29,7 +32,8 @@
   "artistas": ["Ruggats","Los Sinson","Arthur y los minimois", "Abeja maya", "Marco y su mono"],
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
   "img": "assets/images/taller.jpg",
-  "id": "1234"
+  "id": "1234",
+    "ubicacion": "Zona A"
   },
   {
   "nombre": "El show de Truman",
@@ -37,7 +41,8 @@
   "artistas": ["Ruggats","Los Sinson","Arthur y los minimois", "Abeja maya", "Marco y su mono"],
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
   "img": "assets/images/taller.jpg",
-  "id": "1234"
+  "id": "1234",
+    "ubicacion": "Zona A"
   },
   {
   "nombre": "Pepa pig",
@@ -45,7 +50,8 @@
   "artistas": ["Ruggats","Los Sinson","Arthur y los minimois", "Abeja maya", "Marco y su mono"],
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur consequuntur dignissimos dolorum,'eos eum excepturi explicabo ipsum iusto libero magnam magni, molestiae possimus quae quos rerum similique, sint!",
   "img": "assets/images/taller.jpg",
-  "id": "1234"
+  "id": "1234",
+    "ubicacion": "Zona A"
   }
 ]
 
