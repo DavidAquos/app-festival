@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Actuacion, Componente, Question, Taller, TicketPrecios} from '../interface/interface';
+import {Actuacion, ComoLlegar, Componente, Question, Taller, TicketPrecios} from '../interface/interface';
 
 @Injectable({
   providedIn: 'root'
@@ -58,7 +58,11 @@ export class DataService {
     return this.http.get<Question[]>('/assets/data/faq.json');
   }
 
-  getComoLlegar() {
+  /*getComoLlegar() {
     return this.http.get(this.URL_API + '/comollegar');
+  }*/
+
+  getComoLlegar() {
+    return this.http.get<ComoLlegar>(this.URL_API + '/comollegar');
   }
 }
