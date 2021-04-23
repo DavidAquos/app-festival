@@ -11,6 +11,7 @@ export interface Actuacion {
   horario: string;
   artistas: string[];
   descripcion: string;
+  zona: string;
   img: string;
   img_mapa: string;
   ubicacion: string;
@@ -21,6 +22,7 @@ export interface Taller {
   nombre: string;
   horario: string;
   descripcion: string;
+  zona: string;
   img: string;
   img_mapa: string;
   ubicacion: string;
@@ -37,6 +39,13 @@ export interface TicketGestion {
   tipo: string;
   nombre: string;
   qr: number;
+}
+
+export interface ComoLlegar {
+  nombre: string;
+  ubicompleta: string;
+  urlmapa: string;
+  img: string;
 }
 
 export interface Mapa {
