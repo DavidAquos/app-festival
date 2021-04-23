@@ -57,4 +57,8 @@ export class DataService {
   getFaq() {
     return this.http.get<Question[]>('/assets/data/faq.json');
   }
+
+  getComoLlegar() {
+    return this.http.get(this.URL_API + '/comollegar');
+  }
 }
