@@ -1,19 +1,11 @@
 <app-header></app-header>
 
 <ion-content>
-
-  <div style="margin: 15px;" class="ion-text-center">
-    <h1 style="text-align: center; margin-top: 20px; color: #0c8e36; font-weight: bold; font-size: 35px">Mapa del festival</h1>
-  </div>
-  <ion-slides zoom>
+  <ion-slides [options]="slideOpts">
     <ion-slide>
       <div class="swiper-zoom-container">
-        <img [src]="datosMapa" style="height: 40%" alt="Mapa festival"/>
+        <img [src]="img">
       </div>
     </ion-slide>
   </ion-slides>
-  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
-    <app-fab-icon></app-fab-icon>
-  </ion-fab>
-
 </ion-content>

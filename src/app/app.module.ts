@@ -10,7 +10,6 @@ import { ComponentsModule } from './components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 import {PipesModule} from './pipes/pipes.module';
 
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
