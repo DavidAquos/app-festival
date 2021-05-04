@@ -60,7 +60,11 @@ const routes: Routes = [
   {
     path: 'gestionarentradas',
     loadChildren: () => import('./pages/gestionarentradas/gestionarentradas.module').then( m => m.GestionarentradasPageModule)
+  },  {
+    path: 'restaurante',
+    loadChildren: () => import('./pages/restaurante/restaurante.module').then( m => m.RestaurantePageModule)
   },
+
 
 
 

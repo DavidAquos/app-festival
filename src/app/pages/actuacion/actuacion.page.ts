@@ -16,7 +16,7 @@ export class ActuacionPage implements OnInit {
   }
 
   ngOnInit() {
-    const param = this.activatedRoute.snapshot.paramMap.get('id'); // A
+    const param = this.activatedRoute.snapshot.paramMap.get('id');
     this.dataService.getActuacion(param).subscribe(res => {
       this.actuacion = res as Actuacion;
     });

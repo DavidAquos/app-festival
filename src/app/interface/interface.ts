@@ -55,3 +55,10 @@ export interface Question {
   question: string;
   answer: string;
 }
+
+export interface Restaurante {
+  nombre: string;
+  horario: string;
+  ubicacion: string;
+  imagenes: string[];
+}

@@ -68,4 +68,8 @@ export class DataService {
   getComoLlegar() {
     return this.http.get<ComoLlegar>(this.URL_API + '/comollegar');
   }
+
+  getRestaurantes() {
+    return this.http.get(this.URL_API + '/restaurante');
+  }
 }
