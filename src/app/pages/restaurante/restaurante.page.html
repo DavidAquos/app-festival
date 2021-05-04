@@ -1,16 +1,30 @@
 <app-header></app-header>
 
 <ion-content>
-
   <ion-card style="--background: rgba(181,231,37,0.07)">
-    <ion-card-header style="padding: 8px 8px 4px 8px">
-      <ion-img src="/assets/images/restauranteprueba.jpg" ></ion-img>
+    <ion-img [src]="restaurante.img"></ion-img>
+    <ion-card-header>
+      <ion-card-title class="ion-text-capitalize" style="font-size: 2rem; margin-bottom: 10px; color: #0b8e36;">{{restaurante.nombre}}</ion-card-title>
+      <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em; color: black"><ion-icon name="time-outline">
+      </ion-icon> {{restaurante.horario}}
+      </ion-card-subtitle>
+      <div style="width: 100%; border-bottom: #0b8e36 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+      <ion-card-title style="font-size: 1.2rem; margin-bottom: 20px; color: #0b8e36;">Artistas</ion-card-title>
+      <ion-chip color="cocodrile" *ngFor="let artistas of restaurante.artistas">
+        <ion-label class="ion-text-capitalize" color="cocodrile"> {{artistas}}</ion-label>
+      </ion-chip>
     </ion-card-header>
-    <ion-card-content>
-      <ion-card-subtitle style="color: #0b8e36">Restaurante 1</ion-card-subtitle>
-      <label style="color: black"><img src="assets/images/location.png" style="height: 25px"><span
-        style="font-weight: bolder;">Ubicación:</span> Zona A</label>
+
+    <ion-card-content style="margin-top: 10px">
+      <div style="width: 100%; border-bottom: #0b8e36 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+      <ion-card-title style="font-size: 1.2rem;  color: #0b8e36;">Descripción</ion-card-title>
+      <ion-label>
+        {{actuacion.descripcion}}
+      </ion-label>
+      <div style="width: 100%; border-bottom: #0b8e36 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
+      <ion-card-title style="font-size: 1.2rem; margin-bottom: 20px; color: #0b8e36;">Ubicación en el mapa</ion-card-title>
+      <ion-img [src]="actuacion.img_mapa" routerLink="/mapa"></ion-img>
+
     </ion-card-content>
   </ion-card>
-
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Restaurante} from '../../interface/interface';
+import {Actuacion, Restaurante} from '../../interface/interface';
 import {DataService} from '../../services/data.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-restaurante',
@@ -9,16 +10,15 @@ import {DataService} from '../../services/data.service';
 })
 export class RestaurantePage implements OnInit {
 
-  restaurantes: Restaurante[] = [];
-  listRestaurantes: Restaurante[] = [];
-  initialLength = 0;
-  constructor(private dataService: DataService) { }
+  restaurante: Restaurante = {_id: '', nombre: '', horario: '', ubicacion: '', imagenes: []};
+
+  constructor(private dataService: DataService, private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit() {
-    this.dataService.getRestaurantes().subscribe(res => {
-      this.restaurantes = res as Restaurante[];
-      this.listRestaurantes.push(...this.restaurantes.splice(0, 4));
-      this.initialLength = this.listRestaurantes.length;
+    const param = this.activatedRoute.snapshot.paramMap.get('id');
+    this.dataService.getRestaurante(param).subscribe(res => {
+      this.restaurante = res as Restaurante;
     });
   }
 

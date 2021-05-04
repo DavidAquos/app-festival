@@ -57,6 +57,7 @@ export interface Question {
 }
 
 export interface Restaurante {
+  _id: string;
   nombre: string;
   horario: string;
   ubicacion: string;
