@@ -22,6 +22,7 @@ export class RestaurantesPage implements OnInit {
       this.restaurantes = res as Restaurante[];
       this.listRestaurantes.push(...this.restaurantes.splice(0, 4));
       this.initialLength = this.listRestaurantes.length;
+      console.log(this.restaurantes);
     });
   }
 

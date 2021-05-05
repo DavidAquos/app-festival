@@ -76,4 +76,5 @@ export class DataService {
   getRestaurante(id: string) {
     return this.http.get(this.URL_API + `/restaurante/${id}`);
   }
+
 }
