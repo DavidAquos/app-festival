@@ -62,13 +62,18 @@ const routes: Routes = [
     loadChildren: () => import('./pages/gestionarentradas/gestionarentradas.module').then( m => m.GestionarentradasPageModule)
   },
   {
-    path: 'restaurante/:id',
+    path: 'restaurante',
     loadChildren: () => import('./pages/restaurante/restaurante.module').then( m => m.RestaurantePageModule)
   },
   {
     path: 'restaurantes',
     loadChildren: () => import('./pages/restaurantes/restaurantes.module').then( m => m.RestaurantesPageModule)
   },
+  {
+    path: 'carta/:params',
+    loadChildren: () => import('./pages/carta/carta.module').then( m => m.CartaPageModule)
+  },
+
 
 
 

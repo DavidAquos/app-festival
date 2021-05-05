@@ -12,7 +12,10 @@ export class RestaurantesPage implements OnInit {
   restaurantes: Restaurante[] = [];
   listRestaurantes: Restaurante[] = [];
   initialLength = 0;
-  constructor(private dataService: DataService) { }
+
+  constructor(private dataService: DataService) {
+
+  }
 
   ngOnInit() {
     this.dataService.getRestaurantes().subscribe(res => {

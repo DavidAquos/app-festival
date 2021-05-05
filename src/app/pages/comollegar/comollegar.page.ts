@@ -20,7 +20,6 @@ export class ComollegarPage implements OnInit {
     this.dataService.getComoLlegar().subscribe(res => {
       this.comoLlegar = res as ComoLlegar;
       this.transform(this.comoLlegar.urlmapa);
-      console.log(this.comoLlegar.urlmapa);
     });
   }
 

@@ -2,28 +2,26 @@
 
 <ion-content>
   <ion-card style="--background: rgba(181,231,37,0.07)">
-    <ion-img [src]="restaurante.img"></ion-img>
+    <ion-img src="/assets/images/restaurante.jpg"></ion-img>
     <ion-card-header>
-      <ion-card-title class="ion-text-capitalize" style="font-size: 2rem; margin-bottom: 10px; color: #0b8e36;">{{restaurante.nombre}}</ion-card-title>
-      <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em; color: black"><ion-icon name="time-outline">
-      </ion-icon> {{restaurante.horario}}
+      <ion-card-title class="ion-text-capitalize titulo" style="font-size: 2rem; margin-bottom: 10px; color: #0b8e36;">
+        Restaurante Hot Pizza</ion-card-title>
+      <ion-card-subtitle style="margin-left: 15px; padding-top: 10px; font-size: 1em; color: black">
+        <ion-icon name="time-outline">
+      </ion-icon> 10:00 - 19:30
       </ion-card-subtitle>
-      <div style="width: 100%; border-bottom: #0b8e36 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
-      <ion-card-title style="font-size: 1.2rem; margin-bottom: 20px; color: #0b8e36;">Artistas</ion-card-title>
-      <ion-chip color="cocodrile" *ngFor="let artistas of restaurante.artistas">
-        <ion-label class="ion-text-capitalize" color="cocodrile"> {{artistas}}</ion-label>
-      </ion-chip>
     </ion-card-header>
 
     <ion-card-content style="margin-top: 10px">
       <div style="width: 100%; border-bottom: #0b8e36 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
-      <ion-card-title style="font-size: 1.2rem;  color: #0b8e36;">Descripción</ion-card-title>
+      <ion-card-title style="font-size: 1.2rem;  color: #0b8e36; margin-bottom: 20px;">Carta</ion-card-title>
       <ion-label>
-        {{actuacion.descripcion}}
+      <ion-img style="margin-bottom: 20px" src="/assets/images/carta.jpg" [routerLink]="['/carta/',restaurante._id,'&',restaurante.imagenes]"></ion-img>
+      <ion-img style="margin-bottom: 20px" src="/assets/images/carta2.jpg" routerLink="/carta"></ion-img>
       </ion-label>
       <div style="width: 100%; border-bottom: #0b8e36 solid 1px; margin-bottom: 15px; margin-top: 15px"></div>
       <ion-card-title style="font-size: 1.2rem; margin-bottom: 20px; color: #0b8e36;">Ubicación en el mapa</ion-card-title>
-      <ion-img [src]="actuacion.img_mapa" routerLink="/mapa"></ion-img>
+      <ion-img src="/assets/images/mapa_num_prueba.jpg"></ion-img>
 
     </ion-card-content>
   </ion-card>
