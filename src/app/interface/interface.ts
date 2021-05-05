@@ -59,7 +59,9 @@ export interface Question {
 export interface Restaurante {
   _id: string;
   nombre: string;
+  imagen: string;
+  imagenes_carta: string[];
   horario: string;
-  ubicacion: string;
-  imagenes: string[];
+  img_mapa: string;
+  localizacion: string;
 }
