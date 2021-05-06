@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Actuacion, ComoLlegar, Componente, Question, Taller, TicketPrecios} from '../interface/interface';
+import {Actuacion, ComoLlegar, Componente, Question, Restaurante, Taller, TicketPrecios} from '../interface/interface';
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +39,19 @@ export class DataService {
 
   getMapa() {
     return this.http.get(this.URL_API + '/mapa');
+
+  getComoLlegar() {
+    return this.http.get<ComoLlegar>(this.URL_API + '/comollegar');
+  }
+
+  getRestaurantes() {
+    return this.http.get(this.URL_API + '/restaurante');
+  }
+
+  getRestaurante(id: string) {
+    return this.http.get(this.URL_API + `/restaurante/${id}`);
+  }
+
   }*/
 
   getMenuOptions() {
@@ -66,15 +79,15 @@ export class DataService {
   }
 
   getComoLlegar() {
-    return this.http.get<ComoLlegar>(this.URL_API + '/comollegar');
+    return this.http.get<ComoLlegar>('/assets/data/faq.json');
   }
 
   getRestaurantes() {
-    return this.http.get(this.URL_API + '/restaurante');
+    return this.http.get<Restaurante[]>('/assets/data/restaurantes.json');
   }
 
   getRestaurante(id: string) {
-    return this.http.get(this.URL_API + `/restaurante/${id}`);
+    return this.http.get<Restaurante>('/assets/data/restaurante.json');
   }
 
 }
