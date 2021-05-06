@@ -21,7 +21,7 @@ export class MapaPage implements OnInit {
       const img = (res as {imagen: string}).imagen;
     });*/
     if (this.img == null || this.img === '') {
-      this.img = 'assets/images/errorimg.jpg';
+      this.img = 'assets/images/plano.PNG';
     }
   }
 
