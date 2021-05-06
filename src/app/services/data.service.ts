@@ -79,7 +79,7 @@ export class DataService {
   }
 
   getComoLlegar() {
-    return this.http.get<ComoLlegar>('/assets/data/faq.json');
+    return this.http.get<ComoLlegar>('/assets/data/comollegar.json');
   }
 
   getRestaurantes() {

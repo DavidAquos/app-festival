@@ -22,4 +22,14 @@ export class RestaurantePage implements OnInit {
     });
   }
 
+  url(img: string): string {
+    let s = '/carta/';
+    for (let i = 0; i < this.restaurante.imagenes_carta.length; i++) {
+      if (this.restaurante.imagenes_carta[i] === img){
+        s += this.restaurante._id + '||' + i;
+      }
+    }
+    return s;
+  }
+
 }
