@@ -1,6 +1,6 @@
 {
-  "appId": "com.appevento",
-  "appName": "app",
+  "appId": "com.Cocodrilofamilifestival",
+  "appName": "Cocodrilo Festival",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
@@ -17,7 +17,7 @@
       "FadeSplashScreenDuration": "300",
       "SplashShowOnlyFirstTime": "false",
       "SplashScreen": "screen",
-      "SplashScreenDelay": "3000"
+      "SplashScreenDelay": "1000"
     }
   },
   "windowsAndroidStudioPath": "C:\\Users\\User\\AppData\\Local\\JetBrains\\Toolbox\\apps\\AndroidStudio\\ch-0\\201.6858069\\bin\\studio64.exe"

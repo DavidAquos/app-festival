@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
   }
 
   enviarFormularioLogin(formulario: NgForm) {
-    console.log('Formulario: ', formulario, this.usuario);
+    // console.log('Formulario: ', formulario, this.usuario);
   }
 
 }

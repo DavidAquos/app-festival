@@ -1,7 +1,6 @@
 <app-header></app-header>
 
 <ion-content>
-
   <ion-card *ngFor="let r of listRestaurantes" style="--background: rgba(181,231,37,0.07)" [routerLink]="['/restaurante/', r._id]">
     <ion-card-header style="padding: 8px 8px 4px 8px">
       <ion-img src="/assets/images/restaurante.jpg" ></ion-img>

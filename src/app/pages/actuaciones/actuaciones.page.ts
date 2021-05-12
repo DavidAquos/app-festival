@@ -11,7 +11,6 @@ export class ActuacionesPage implements OnInit {
 
   count = 0;
   initialLength = 0;
-  textFind = '';
   listActuaciones: Actuacion[] = [];
   actuaciones: Actuacion[] = [];
 
@@ -35,9 +34,5 @@ export class ActuacionesPage implements OnInit {
       this.listActuaciones.push(...this.actuaciones.splice(0, 4));
       event.target.complete();
     }, 500);
-  }
-
-  buscar(event: any) {
-    this.textFind = event.detail.value;
   }
 }

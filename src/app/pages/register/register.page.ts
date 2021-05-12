@@ -66,7 +66,7 @@ export class RegisterPage implements OnInit {
   }
 
   enviarFormularioRegistro(formulario: NgForm) {
-    console.log('Formulario: ', formulario, this.usuario);
+    // console.log('Formulario: ', formulario, this.usuario);
   }
 
   registro() {

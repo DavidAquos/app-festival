@@ -11,9 +11,9 @@ export class DataService {
 
   logged = false;
   ticketsCard: {nombre: string, precio: number, cant: number}[] = [];
-  URL_API = 'http://localhost:3000/api/eventapp';
+  URL_API = 'https://angry-bhabha.82-223-151-201.plesk.page/api/eventapp';
 
-  /*getActuaciones() {
+  getActuaciones() {
     return this.http.get(this.URL_API + '/actuaciones');
   }
 
@@ -39,9 +39,6 @@ export class DataService {
 
   getMapa() {
     return this.http.get(this.URL_API + '/mapa');
-
-  getComoLlegar() {
-    return this.http.get<ComoLlegar>(this.URL_API + '/comollegar');
   }
 
   getRestaurantes() {
@@ -52,13 +49,11 @@ export class DataService {
     return this.http.get(this.URL_API + `/restaurante/${id}`);
   }
 
-  }*/
-
   getMenuOptions() {
     return this.http.get<Componente[]>('/assets/data/menu.json');
   }
 
-  getActuaciones() {
+  /*getActuaciones() {
     return this.http.get<Actuacion[]>('/assets/data/actuaciones.json');
   }
 
@@ -88,6 +83,6 @@ export class DataService {
 
   getRestaurante(id: string) {
     return this.http.get<Restaurante>('/assets/data/restaurante.json');
-  }
+  }*/
 
 }

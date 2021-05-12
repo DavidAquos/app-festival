@@ -1,9 +1,7 @@
 <app-header></app-header>
 
 <ion-content>
-  <ion-searchbar animated (ionChange)="buscar($event)"
-  ></ion-searchbar>
-  <ion-card class="ion-no-padding" *ngFor="let a of listaTalleres | filtro: textFind:'taller'" [routerLink]="['/taller/', a._id]" style="--background: rgba(181,231,37,0.07)">
+  <ion-card class="ion-no-padding" *ngFor="let a of listaTalleres" [routerLink]="['/taller/', a._id]" style="--background: rgba(181,231,37,0.07)">
     <ion-card-header>
       <ion-grid class="ion-no-margin ion-no-padding" >
         <ion-row>

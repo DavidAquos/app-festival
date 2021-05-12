@@ -11,8 +11,7 @@ export class TalleresPage implements OnInit {
 
   count = 0;
   initialLength = 0;
-  textFind = '';
-  listaTalleres: {taller: string, tiempo: string, img: string, id: string}[] = [];
+  listaTalleres: Taller[] = [];
   talleres = [];
 
   constructor(private dataService: DataService) { }
@@ -41,10 +40,6 @@ export class TalleresPage implements OnInit {
       this.listaTalleres.push(this.talleres[this.count]);
       this.count++;
     }
-  }
-
-  buscar(event: any) {
-    this.textFind = event.detail.value;
   }
 
 }
