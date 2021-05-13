@@ -17,9 +17,9 @@ export class MapaPage implements OnInit {
   };
 
   constructor(private dataService: DataService) {
-    /*dataService.getMapa().subscribe( res => {
+    dataService.getMapa().subscribe( res => {
       const img = (res as {imagen: string}).imagen;
-    });*/
+    });
     if (this.img == null || this.img === '') {
       this.img = 'assets/images/errorimg.jpg';
     }
