@@ -65,3 +65,9 @@ export interface Restaurante {
   img_mapa: string;
   localizacion: string;
 }
+
+export interface DatosContacto {
+  _id: string;
+  numero: string;
+  correo: string;
+}

@@ -53,6 +53,10 @@ export class DataService {
     return this.http.get<Componente[]>('/assets/data/menu.json');
   }
 
+  getDatosContacto() {
+    return this.http.get(this.URL_API + '/datoscontacto');
+  }
+
   /*getActuaciones() {
     return this.http.get<Actuacion[]>('/assets/data/actuaciones.json');
   }
@@ -84,5 +88,4 @@ export class DataService {
   getRestaurante(id: string) {
     return this.http.get<Restaurante>('/assets/data/restaurante.json');
   }*/
-
 }
