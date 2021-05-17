@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {Taller} from '../../interface/interface';
+import {LoadingController} from "@ionic/angular";
 
 @Component({
   selector: 'app-talleres',
@@ -14,7 +15,7 @@ export class TalleresPage implements OnInit {
   listaTalleres: Taller[] = [];
   talleres = [];
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, public loadingController: LoadingController) { }
 
   ngOnInit() {
     this.dataService.getTalleres().subscribe(res => {
@@ -22,6 +23,7 @@ export class TalleresPage implements OnInit {
       this.listaTalleres.push(...this.talleres.splice(0, 4));
       this.initialLength = this.listaTalleres.length;
     });
+    this.presentLoading();
   }
 
   doInfinite(event){
@@ -40,6 +42,15 @@ export class TalleresPage implements OnInit {
       this.listaTalleres.push(this.talleres[this.count]);
       this.count++;
     }
+  }
+
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Cargando...',
+      duration: 1000
+    });
+    await loading.present();
   }
 
 }

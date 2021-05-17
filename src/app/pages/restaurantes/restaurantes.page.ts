@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Restaurante} from '../../interface/interface';
 import {DataService} from '../../services/data.service';
+import {LoadingController} from "@ionic/angular";
 
 @Component({
   selector: 'app-restaurantes',
@@ -13,7 +14,7 @@ export class RestaurantesPage implements OnInit {
   listRestaurantes: Restaurante[] = [];
   initialLength = 0;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, public loadingController: LoadingController) {
 
   }
 
@@ -23,6 +24,17 @@ export class RestaurantesPage implements OnInit {
       this.listRestaurantes.push(...this.restaurantes.splice(0, 4));
       this.initialLength = this.listRestaurantes.length;
     });
+    this.presentLoading();
+  }
+
+
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Cargando...',
+      duration: 1000
+    });
+    await loading.present();
   }
 
 }
