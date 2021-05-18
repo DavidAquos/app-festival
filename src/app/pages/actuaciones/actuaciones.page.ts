@@ -46,4 +46,5 @@ export class ActuacionesPage implements OnInit {
 
     await loading.present();
   }
+
 }
