@@ -10,9 +10,10 @@ import {DatosContacto, Question} from '../../interface/interface';
 export class AsistenciaPage implements OnInit {
 
   questions: Question[];
-  datosContacto: DatosContacto;
+  datosContacto: DatosContacto = {_id: '', numero: '', correo: ''};
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {
+  }
 
   ngOnInit() {
     this.dataService.getFaq().subscribe(res => {
