@@ -28,10 +28,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/comollegar/comollegar.module').then( m => m.ComollegarPageModule)
   },
   {
-    path: 'ajustes',
-    loadChildren: () => import('./pages/ajustes/ajustes.module').then( m => m.AjustesPageModule)
-  },
-  {
     path: 'faq',
     loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
   },
@@ -50,14 +46,6 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
-    path: 'comprartickets',
-    loadChildren: () => import('./pages/comprartickets/comprartickets.module').then( m => m.ComprarticketsPageModule)
-  },
-  {
-    path: 'gestionarentradas',
-    loadChildren: () => import('./pages/gestionarentradas/gestionarentradas.module').then( m => m.GestionarentradasPageModule)
   },
   {
     path: 'restaurante/:id',
