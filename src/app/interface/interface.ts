@@ -21,7 +21,7 @@ export interface Taller {
   _id: string;
   nombre: string;
   horario: string;
-  fecha: string
+  fecha: string;
   descripcion: string;
   img: string;
   img_mapa: string;
@@ -33,12 +33,6 @@ export interface TicketPrecios {
   precio: number;
   detalles: string[];
   link: string;
-}
-
-export interface TicketGestion {
-  tipo: string;
-  nombre: string;
-  qr: number;
 }
 
 export interface ComoLlegar {

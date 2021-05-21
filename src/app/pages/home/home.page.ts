@@ -10,7 +10,6 @@ import {Componente} from '../../interface/interface';
 export class HomePage implements OnInit {
 
   categories: Componente[];
-  pocolocoareready = false;
 
   constructor(private dataService: DataService) { }
 
@@ -18,10 +17,5 @@ export class HomePage implements OnInit {
     this.dataService.getMenuOptions().subscribe(res => {
       this.categories = res as Componente[];
     });
-  }
-
-
-  loginReq(name: string) {
-    return !(name === 'Gestionar entradas' && !this.dataService.logged);
   }
 }

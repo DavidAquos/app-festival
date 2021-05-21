@@ -6,8 +6,8 @@ android {
         applicationId "io.ionic.Cocodrilofamilifestival"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 6
-        versionName "1.04"
+        versionCode 7
+        versionName "1.05"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

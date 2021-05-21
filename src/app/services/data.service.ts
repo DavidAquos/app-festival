@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Actuacion, ComoLlegar, Componente, Question, Restaurante, Taller, TicketPrecios} from '../interface/interface';
+import { Componente } from '../interface/interface';
 
 @Injectable({
   providedIn: 'root'
