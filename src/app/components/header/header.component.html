@@ -3,8 +3,10 @@
     <ion-buttons slot="start">
       <ion-back-button text="Atrás" defaultHref="/" style="color: white"></ion-back-button>
     </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-menu-button menu="menu"><img src="assets/images/menu.png" style="height: 35px; width: 35px"></ion-menu-button>
+    <ion-buttons slot="end" *ngIf="list">
+      <ion-button (click)="popoverOpen($event)">
+        <ion-icon name="filter-outline" style="color: white"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {Taller} from '../../interface/interface';
-import {LoadingController} from "@ionic/angular";
+import {LoadingController} from '@ionic/angular';
 
 @Component({
   selector: 'app-talleres',
@@ -13,13 +13,15 @@ export class TalleresPage implements OnInit {
   count = 0;
   initialLength = 0;
   listaTalleres: Taller[] = [];
-  talleres = [];
+  talleres: Taller[] = [];
+  auxTaller: Taller[] = [];
 
   constructor(private dataService: DataService, public loadingController: LoadingController) { }
 
   ngOnInit() {
     this.dataService.getTalleres().subscribe(res => {
       this.talleres = res as Taller[];
+      this.auxTaller.push(...this.talleres);
       this.listaTalleres.push(...this.talleres.splice(0, 4));
       this.initialLength = this.listaTalleres.length;
     });
@@ -53,4 +55,18 @@ export class TalleresPage implements OnInit {
     await loading.present();
   }
 
+  order(filter: number){
+    switch (filter) {
+      case 1:
+        this.auxTaller.sort((a, b) => (a.fecha + ' ' + a.horario).localeCompare((b.fecha + ' ' + b.horario)));
+        break;
+      case 2:
+        this.auxTaller.sort((a, b) => a.ubicacion.localeCompare(b.ubicacion));
+        break;
+    }
+    this.talleres.splice(0, this.talleres.length);
+    this.talleres.push(...this.auxTaller);
+    this.listaTalleres.splice(0, this.listaTalleres.length);
+    this.listaTalleres.push(...this.talleres.splice(0, 4));
+  }
 }

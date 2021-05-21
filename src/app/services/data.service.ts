@@ -56,36 +56,4 @@ export class DataService {
   getDatosContacto() {
     return this.http.get(this.URL_API + '/datoscontacto');
   }
-
-  /*getActuaciones() {
-    return this.http.get<Actuacion[]>('/assets/data/actuaciones.json');
-  }
-
-  getActuacion(id: string) {
-    return this.http.get<Actuacion>('/assets/data/actuacion.json');
-  }
-
-  getTaller(id: string) {
-    return this.http.get<Taller>('/assets/data/taller.json');
-  }
-
-  getTalleres() {
-    return this.http.get<Taller[]>('/assets/data/talleres.json');
-  }
-
-  getFaq() {
-    return this.http.get<Question[]>('/assets/data/faq.json');
-  }
-
-  getComoLlegar() {
-    return this.http.get<ComoLlegar>('/assets/data/comollegar.json');
-  }
-
-  getRestaurantes() {
-    return this.http.get<Restaurante[]>('/assets/data/restaurantes.json');
-  }
-
-  getRestaurante(id: string) {
-    return this.http.get<Restaurante>('/assets/data/restaurante.json');
-  }*/
 }

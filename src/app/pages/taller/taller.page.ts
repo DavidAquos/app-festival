@@ -10,7 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class TallerPage implements OnInit {
 
-  taller: Taller = {_id: '', descripcion: '', horario: '', img: '', img_mapa: '', nombre: '', ubicacion: ''};
+  taller: Taller = {_id: '', descripcion: '', horario: '', fecha: '', img: '', img_mapa: '', nombre: '', ubicacion: ''};
 
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute) { }
 

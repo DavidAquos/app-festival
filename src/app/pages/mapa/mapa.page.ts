@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+  import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {Mapa} from "../../interface/interface";
 

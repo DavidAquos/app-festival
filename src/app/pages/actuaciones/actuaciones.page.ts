@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Actuacion} from '../../interface/interface';
 import {DataService} from '../../services/data.service';
-import {LoadingController, ModalController} from "@ionic/angular";
+import {LoadingController, ModalController} from '@ionic/angular';
 
 @Component({
   selector: 'app-actuaciones',
@@ -14,12 +14,14 @@ export class ActuacionesPage implements OnInit {
   initialLength = 0;
   listActuaciones: Actuacion[] = [];
   actuaciones: Actuacion[] = [];
+  auxAct: Actuacion[] = [];
 
   constructor(private dataService: DataService, public loadingController: LoadingController) { }
 
   ngOnInit() {
     this.dataService.getActuaciones().subscribe(res => {
       this.actuaciones = res as Actuacion[];
+      this.auxAct.push(...(res as Actuacion[]));
       this.listActuaciones.push(...this.actuaciones.splice(0, 4));
       this.initialLength = this.listActuaciones.length;
     });
@@ -39,7 +41,6 @@ export class ActuacionesPage implements OnInit {
   }
   async presentLoading() {
     const loading = await this.loadingController.create({
-      cssClass: 'my-custom-class',
       message: 'Cargando...',
       duration: 1000
     });
@@ -47,4 +48,18 @@ export class ActuacionesPage implements OnInit {
     await loading.present();
   }
 
+  order(filter: number){
+    switch (filter) {
+      case 1:
+        this.auxAct.sort((a, b) => (a.fecha + ' ' + a.horario).localeCompare((b.fecha + ' ' + b.horario)));
+        break;
+      case 2:
+        this.auxAct.sort((a, b) => a.ubicacion.localeCompare(b.ubicacion));
+        break;
+    }
+    this.actuaciones.splice(0, this.actuaciones.length);
+    this.actuaciones.push(...this.auxAct);
+    this.listActuaciones.splice(0, this.listActuaciones.length);
+    this.listActuaciones.push(...this.actuaciones.splice(0, 4));
+  }
 }

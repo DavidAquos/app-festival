@@ -9,6 +9,7 @@ export interface Actuacion {
   _id: string;
   nombre: string;
   horario: string;
+  fecha: string;
   artistas: string[];
   descripcion: string;
   img: string;
@@ -20,6 +21,7 @@ export interface Taller {
   _id: string;
   nombre: string;
   horario: string;
+  fecha: string
   descripcion: string;
   img: string;
   img_mapa: string;
