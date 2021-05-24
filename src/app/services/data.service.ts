@@ -10,7 +10,6 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   logged = false;
-  ticketsCard: {nombre: string, precio: number, cant: number}[] = [];
   URL_API = 'https://angry-bhabha.82-223-151-201.plesk.page/api/eventapp';
 
   getActuaciones() {

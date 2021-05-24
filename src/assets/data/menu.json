@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "assets/images/actuaciones.png",
+    "name": "Actuaciones",
+    "redirectTo": "/actuaciones",
+    "lines": "inset"
+  },
+  {
+    "icon": "assets/images/talleres.png",
+    "name": "Talleres",
+    "redirectTo": "/talleres",
+    "lines": "inset"
+  },
+  {
+    "icon": "assets/images/mapa.png",
+    "name": "Mapa",
+    "redirectTo": "/mapa",
+    "lines": "inset"
+  },
+  {
+    "icon": "assets/images/gmap.png",
+    "name": "Como llegar",
+    "redirectTo": "/comollegar",
+    "lines": "inset"
+  }
+]
