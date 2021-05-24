@@ -21,7 +21,6 @@ export class ActuacionesPage implements OnInit {
   ngOnInit() {
     this.dataService.getActuaciones().subscribe(res => {
       this.auxAct = res as Actuacion[];
-      console.log(this.auxAct);
       this.order(1);
     });
     this.presentLoading();
