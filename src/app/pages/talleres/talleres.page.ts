@@ -20,10 +20,8 @@ export class TalleresPage implements OnInit {
 
   ngOnInit() {
     this.dataService.getTalleres().subscribe(res => {
-      this.talleres = res as Taller[];
-      this.auxTaller.push(...this.talleres);
-      this.listaTalleres.push(...this.talleres.splice(0, 4));
-      this.initialLength = this.listaTalleres.length;
+      this.auxTaller = res as Taller[];
+      this.order(1);
     });
     this.presentLoading();
   }
@@ -33,7 +31,7 @@ export class TalleresPage implements OnInit {
       this.loadItems();
       event.target.complete();
       if (this.count >= this.talleres.length) { event.target.disabled = true; }
-    }, 1000);
+    }, 500);
   }
 
   loadItems(){
@@ -67,6 +65,13 @@ export class TalleresPage implements OnInit {
     this.talleres.splice(0, this.talleres.length);
     this.talleres.push(...this.auxTaller);
     this.listaTalleres.splice(0, this.listaTalleres.length);
-    this.listaTalleres.push(...this.talleres.splice(0, 4));
+    this.count = 0;
+    this.initialLength = this.listaTalleres.length;
+    this.loadItems();
+    const doinfinite = document.getElementById('doinfinite') as HTMLIonInfiniteScrollElement;
+    doinfinite.disabled = false;
+    const content = document.getElementById('contentid') as HTMLIonContentElement;
+    doinfinite.disabled = false;
+    content.scrollToTop();
   }
 }

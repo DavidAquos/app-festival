@@ -1,6 +1,6 @@
 <app-header (filter)="order($event)" list="true"></app-header>
 
-<ion-content>
+<ion-content id="contentid">
   <ion-card class="ion-no-padding" *ngFor="let a of listActuaciones, " [routerLink]="['/actuacion/', a._id]" style="--background: rgba(181,231,37,0.07)">
     <ion-card-header>
       <ion-grid class="ion-no-margin ion-no-padding" >
@@ -23,7 +23,7 @@
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <app-fab-icon></app-fab-icon>
   </ion-fab>
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)" id="doinfinite">
     <ion-infinite-scroll-content loadingSpinner="dots" loadingText="Cargando actuaciones...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>

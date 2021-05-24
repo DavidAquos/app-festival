@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Actuacion} from '../../interface/interface';
 import {DataService} from '../../services/data.service';
-import {LoadingController, ModalController} from '@ionic/angular';
+import {LoadingController} from '@ionic/angular';
 
 @Component({
   selector: 'app-actuaciones',
@@ -21,24 +21,29 @@ export class ActuacionesPage implements OnInit {
   ngOnInit() {
     this.dataService.getActuaciones().subscribe(res => {
       this.actuaciones = res as Actuacion[];
-      this.auxAct.push(...(res as Actuacion[]));
-      this.listActuaciones.push(...this.actuaciones.splice(0, 4));
-      this.initialLength = this.listActuaciones.length;
+      this.order(1);
     });
     this.presentLoading();
   }
 
   doInfinite(event: any) {
-    if (this.actuaciones.length > this.initialLength){
+    setTimeout( () => {
+      this.loadItems();
       event.target.complete();
-      event.disabled = true;
-      return;
-    }
-    setTimeout(() => {
-      this.listActuaciones.push(...this.actuaciones.splice(0, 4));
-      event.target.complete();
+      if (this.count >= this.actuaciones.length) { event.target.disabled = true; }
     }, 500);
   }
+
+  loadItems(){
+    for (let i = 0; i < 4; i++) {
+      if (this.count === this.actuaciones.length){
+        return;
+      }
+      this.listActuaciones.push(this.actuaciones[this.count]);
+      this.count++;
+    }
+  }
+
   async presentLoading() {
     const loading = await this.loadingController.create({
       message: 'Cargando...',
@@ -60,6 +65,9 @@ export class ActuacionesPage implements OnInit {
     this.actuaciones.splice(0, this.actuaciones.length);
     this.actuaciones.push(...this.auxAct);
     this.listActuaciones.splice(0, this.listActuaciones.length);
-    this.listActuaciones.push(...this.actuaciones.splice(0, 4));
-  }
+    this.loadItems();
+    const doinfinite = document.getElementById('doinfinite') as HTMLIonInfiniteScrollElement;
+    const content = document.getElementById('contentid') as HTMLIonContentElement;
+    doinfinite.disabled = false;
+    content.scrollToTop();  }
 }
